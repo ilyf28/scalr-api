@@ -16,7 +16,17 @@
         <h2>Try it out!</h2>
         <p>No parameters.</p>
         <form method="POST" action="{{ url('/session') }}">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="submit" name="submit" value="Authorize and execute" />
         </form>
+        <p></p>
+        @isset($session)
+        <h2>Response Body</h2>
+        <p>
+            @php
+            echo '<pre>'.json_encode($session, JSON_PRETTY_PRINT).'</pre>';
+            @endphp
+        </p>
+        @endisset
     </body>
 </html>
