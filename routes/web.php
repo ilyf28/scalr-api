@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('session');
 });
+
+Route::post('/session', 'SessionController@currentAuthenticatedUser');
