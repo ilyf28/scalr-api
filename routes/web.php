@@ -17,3 +17,5 @@ Route::get('/', function () {
 
 Route::post('/session', 'SessionController@currentAuthenticatedUser');
 Route::get('/farms', 'FarmsController@listFarms');
+Route::get('/farms/create', 'FarmsController@createFarm');
+Route::post('/farms', 'FarmsController@storeFarm');
