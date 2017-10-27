@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::post('/session', 'SessionController@currentAuthenticatedUser');
+Route::get('/farms', 'FarmsController@listFarms');
