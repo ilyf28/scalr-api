@@ -12,6 +12,15 @@
     </form>
 </p>
 <p></p>
+@isset($farm)
+<h2>Response Body</h2>
+<p>
+    @php
+    echo '<pre>'.json_encode($farm, JSON_PRETTY_PRINT).'</pre>';
+    @endphp
+</p>
+<p></p>
+@endisset
 <p>
     <a href="/farms">List Farms</a>
 </p>

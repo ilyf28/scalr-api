@@ -110,9 +110,8 @@ class FarmsController extends Controller
 
             if ($response->getStatusCode() === 201) {
                 $result = json_decode($response->getBody());
-                dd($result);
 
-                return view('farms.list', ['farms' => $result]);
+                return view('farms.create', ['farm' => $result]);
             } else {
             }
         } catch (Exception $e) {
