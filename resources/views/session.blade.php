@@ -28,5 +28,12 @@
             @endphp
         </p>
         @endisset
+        <p></p>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="/farms">Farms</a></li>
+            </ul>
+        </nav>
     </body>
 </html>
