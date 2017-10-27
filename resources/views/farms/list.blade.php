@@ -3,7 +3,7 @@
 <p></p>
 <p>
     <form method="GET" action="{{ url('/farms/create') }}">
-        <button type="submit">Create Farms</button>
+        <button type="submit">Create Farm</button>
     </form>
 </p>
 <p></p>
