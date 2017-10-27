@@ -6,4 +6,12 @@
         <button type="submit">Create Farms</button>
     </form>
 </p>
-<br />
+<p></p>
+@isset($farms)
+<h2>Response Body</h2>
+<p>
+    @php
+    echo '<pre>'.json_encode($farms, JSON_PRETTY_PRINT).'</pre>';
+    @endphp
+</p>
+@endisset
