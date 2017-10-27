@@ -5,6 +5,9 @@
     <form method="GET" action="{{ url('/farms/create') }}">
         <button type="submit">Create Farm</button>
     </form>
+    <form method="GET" action="{{ url('/farms/delete') }}">
+        <button type="submit">Delete Farm</button>
+    </form>
 </p>
 <p></p>
 @isset($farms)
