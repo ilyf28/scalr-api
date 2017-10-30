@@ -202,6 +202,40 @@ class FarmsController extends Controller
 
     public function terminateFarm(Request $request)
     {
-        return view('farms.delete');
+        try {
+            $farmId = $request->farmId;
+
+            $envId = '1';   // hard coding
+            $api_uri = '/api/v1beta0/user/'.$envId.'/farms/'.$farmId.'/actions/terminate/';
+            $api_key_id = env('SCALR_API_KEY_ID');
+            $api_secret_key = env('SCALR_API_SECRET_KEY');
+            $body = '';
+            $method = 'POST';
+            $query = '';
+            $date = date('c');
+            $request = array(
+                $method,
+                $date,
+                $api_uri,
+                $query,
+                $body
+            );
+            $signature = 'V1-HMAC-SHA256 ' . base64_encode(hash_hmac('sha256', implode("\n", $request), $api_secret_key, true));
+
+            $response = $this->_client->request($method, env('SCALR_DOMAIN').$api_uri, [
+                'headers' => [
+                    'X-Scalr-Key-Id' => $api_key_id,
+                    'X-Scalr-Date' => $date,
+                    'X-Scalr-Debug' => '1',
+                    'X-Scalr-Signature' => $signature
+                ]
+            ]);
+
+            if ($response->getStatusCode() === 200) {
+                return redirect('/farms');
+            } else {
+            }
+        } catch (Exception $e) {
+        }
     }
 }
