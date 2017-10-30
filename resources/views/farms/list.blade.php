@@ -14,11 +14,11 @@
 
 <table style="width:100%">
     <tr>
-        <th>Name</th>
-        <th>Description</th> 
-        <th>Status</th> 
-        <th>Owner</th>
-        <th>Actions</th>
+        <th align="left">Name</th>
+        <th align="left">Description</th> 
+        <th align="left">Status</th> 
+        <th align="left">Owner</th>
+        <th align="left">Actions</th>
     </tr>
 @foreach ($farms->data as $farm)
     <tr>
