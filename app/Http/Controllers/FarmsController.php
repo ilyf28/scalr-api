@@ -238,4 +238,13 @@ class FarmsController extends Controller
         } catch (Exception $e) {
         }
     }
+
+    public function createFarmRole(Request $request)
+    {
+        return view('farm-roles.create');
+    }
+
+    public function storeFarmRole(Request $request)
+    {
+    }
 }

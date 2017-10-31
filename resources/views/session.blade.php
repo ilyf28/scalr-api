@@ -33,6 +33,7 @@
         <nav>
             <ul>
                 <li><a href="/farms">Farms</a></li>
+                <li><a href="/farm-roles/create">Farms / Farm Roles: Create</a></li>
             </ul>
         </nav>
     </body>

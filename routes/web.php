@@ -23,3 +23,6 @@ Route::get('/farms/delete', 'FarmsController@deleteFarm');
 Route::delete('/farms', 'FarmsController@destroyFarm');
 Route::get('/farms/{farmId}/launch', 'FarmsController@launchFarm');
 Route::get('/farms/{farmId}/terminate', 'FarmsController@terminateFarm');
+
+Route::get('/farm-roles/create', 'FarmsController@createFarmRole');
+Route::post('/farm-roles', 'FarmsController@storeFarmRole');
