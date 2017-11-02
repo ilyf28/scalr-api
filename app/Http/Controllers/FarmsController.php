@@ -329,6 +329,10 @@ class FarmsController extends Controller
                     "networking" => array(
                         "networks" => array(
                             array("id" => $network)
+                        ),
+                        "hostname" => array(
+                            "type" => "TemplateHostnameConfiguration",
+                            "template" => "ubuntu-sh"
                         )
                     )
                 );
