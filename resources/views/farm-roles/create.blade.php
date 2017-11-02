@@ -24,6 +24,7 @@
             <label style="display: inline-block; width: 150px;">Host: </label><span style="color: red;"> * </span><input type="text" name="hosts" value="host-109" /><br />
             <label style="display: inline-block; width: 150px;">Data Store: </label><span style="color: red;"> * </span><input type="text" name="dataStore" value="datastore-112" /><br />
             <label style="display: inline-block; width: 150px;">Network: </label><span style="color: red;"> * </span><input type="text" name="network" value="network-111" /><br />
+            <label style="display: inline-block; width: 150px;">Hostname: </label><span style="color: red;"> * </span><input type="text" name="hostname" value="ubuntu-1604-base" /><br />
         </p>
         <button type="submit">Farm / Farm Role 생성</button>
     </form>

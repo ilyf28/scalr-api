@@ -277,6 +277,7 @@ class FarmsController extends Controller
             $instanceType = $request->instanceType;
             $roleId = '96542';
             $network = $request->network;
+            $hostname = $request->hostname;
 
             $envId = '1';   // hard coding
             $api_uri = '/api/v1beta0/user/'.$envId.'/farms/';
@@ -332,7 +333,7 @@ class FarmsController extends Controller
                         ),
                         "hostname" => array(
                             "type" => "TemplateHostnameConfiguration",
-                            "template" => "ubuntu-sh"
+                            "template" => $hostname
                         )
                     )
                 );
